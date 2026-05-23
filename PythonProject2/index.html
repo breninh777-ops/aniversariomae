@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Feliz Aniversário, Mãe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true">
+      <div class="bg__grain"></div>
+      <div class="bg__rays"></div>
+      <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+      <div id="photoFloaters" class="photoFloaters" aria-hidden="true"></div>
+      <div id="floaters" class="floaters" aria-hidden="true"></div>
+    </div>
+
+    <main class="page">
+      <section class="hero" aria-labelledby="title">
+        <header class="hero__header">
+          <div class="badge" role="text" aria-label="Mensagem de aniversário">
+            Aniversário
+          </div>
+          <h1 id="title">Feliz Aniversário, Mãe</h1>
+          <p class="subtitle">
+            Um pedacinho do meu amor, em forma de página.
+          </p>
+        </header>
+
+        <article class="letter" aria-label="Mensagem">
+          <p>
+            Hoje é um dia especial, porque celebramos a vida da mulher mais
+            incrível que conheço. Mãe, você é meu exemplo de força, amor e
+            dedicação. Cada gesto seu me inspira e me mostra o verdadeiro
+            significado de cuidar e amar sem limites.
+          </p>
+          <p>
+            Desejo que este novo ano traga ainda mais saúde, paz e momentos
+            felizes. Que seus sonhos se realizem e que você continue iluminando
+            nossas vidas com sua presença.
+          </p>
+          <p>
+            Obrigado por tudo o que você faz e por ser quem você é. Te amo
+            muito! <span class="heart" aria-label="coração">❤</span>
+          </p>
+
+          <div class="actions">
+            <button id="celebrateBtn" class="btn" type="button">
+              Celebrar
+            </button>
+            <button id="surpriseBtn" class="btn btn--cute" type="button">
+              OBTENHA SUA SURPRESA
+            </button>
+            <button id="calmBtn" class="btn btn--ghost" type="button">
+              Pausar animações
+            </button>
+          </div>
+        </article>
+
+        <footer class="footer" aria-label="Assinatura">
+          <div class="sig">
+            <span class="sig__label">Com carinho,</span>
+            <span class="sig__name">Breno</span>
+          </div>
+          <div class="hint">Dica: toque em “Celebrar”.</div>
+        </footer>
+      </section>
+    </main>
+
+    <div id="lovePop" class="lovePop" aria-hidden="true">
+      <span class="lovePop__heart">❤</span>
+      <span>TE AMO MAE</span>
+    </div>
+
+    <div id="surpriseModal" class="modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close="true"></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Surpresa">
+        <div class="modal__header">
+          <div class="modal__title">Sua surpresa</div>
+          <button id="closeSurprise" class="iconBtn" type="button" aria-label="Fechar">
+            ✕
+          </button>
+        </div>
+        <div class="modal__body">
+          <div class="scrollPad" aria-hidden="true"></div>
+          <div class="scratchGrid" aria-label="Raspadinhas">
+            <div class="scratchCard" data-scratch-card data-scratch-id="1">
+              <div class="scratchCard__prize" data-prize>nao foi dessa vez</div>
+              <canvas class="scratchCard__canvas" width="520" height="680"></canvas>
+            </div>
+            <div class="scratchCard" data-scratch-card data-scratch-id="2">
+              <div class="scratchCard__prize" data-prize>nao foi dessa vez</div>
+              <canvas class="scratchCard__canvas" width="520" height="680"></canvas>
+            </div>
+            <div class="scratchCard" data-scratch-card data-scratch-id="3">
+              <div class="scratchCard__prize" data-prize>pix de 150</div>
+              <canvas class="scratchCard__canvas" width="520" height="680"></canvas>
+            </div>
+          </div>
+          <div id="prizeBalloon" class="prizeBalloon" aria-live="polite" aria-atomic="true" hidden>
+            <div class="prizeBalloon__bubble">
+              <div class="prizeBalloon__title">parabens pelo premio</div>
+              <div class="prizeBalloon__text">
+                tira print e mande para Breno e aguarde sua recompensa
+              </div>
+            </div>
+          </div>
+          <div class="modal__hint">Raspe com o dedo ou com o mouse.</div>
+        </div>
+        <div class="modal__footer">
+          <button id="doneScratch" class="btn" type="button">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
